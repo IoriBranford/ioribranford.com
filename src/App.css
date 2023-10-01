@@ -40,3 +40,20 @@
 .read-the-docs {
   color: #888;
 }
+
+.game-card {
+  position: relative;
+}
+
+.game-card-image {
+  border-radius: 16px;
+}
+
+.game-card-title {
+  position: absolute;
+  left: 16px;
+  top: 0;
+  text-align: left;
+  color: white;
+  text-shadow: 1px 1px #000000,-1px 1px #000000,1px -1px #000000,-1px -1px #000000;
+}
