@@ -1,11 +1,13 @@
 import {GameInfo} from "./GameInfo";
 
-export default function GameCard({coverArt, title} : GameInfo) {
+export default function GameCard(gameInfo : GameInfo) {
+    const { title, keyArtPath, keyArtCardStyle } = gameInfo
     return <div style={{
         position: 'relative',
     }}>
-        <img src={coverArt} alt={title} style={{
-            borderRadius: '16px'
+        <img src={keyArtPath} alt={title} width={300} height={420} style={{
+            borderRadius: '16px',
+            ...keyArtCardStyle
         }}/>
         <h2 style={{
             position: 'absolute',

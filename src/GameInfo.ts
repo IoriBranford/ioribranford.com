@@ -1,15 +1,26 @@
+import { CSSProperties } from "react";
+
 export interface GameInfo {
   title: string;
-  coverArt: string;
+  keyArtPath: string;
+  keyArtCardStyle: CSSProperties;
 }
 
-export const AllGameInfo = [
+export const AllGameInfo : GameInfo[] = [
   {
-    coverArt: "card/demonizer.png",
     title: "Demonizer",
+    keyArtPath: "/demonizer/cover-art.png",
+    keyArtCardStyle: {
+      objectFit: 'none',
+      objectPosition: '-148px -82px',
+    },
   },
   {
-    coverArt: "card/honeysoldier.jpg",
     title: "Honey Soldier",
+    keyArtPath: "/honey-soldier/cover-art.jpg",
+    keyArtCardStyle: {
+      objectFit: 'none',
+      objectPosition: '-240px -44px',
+    },
   },
 ];
