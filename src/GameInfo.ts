@@ -6,8 +6,8 @@ export interface GameInfo {
   keyArtCardStyle: CSSProperties;
 }
 
-export const AllGameInfo : GameInfo[] = [
-  {
+export const AllGameInfo : {[key:string]: GameInfo} = {
+  'demonizer': {
     title: "Demonizer",
     keyArtPath: "/demonizer/cover-art.png",
     keyArtCardStyle: {
@@ -15,7 +15,7 @@ export const AllGameInfo : GameInfo[] = [
       objectPosition: '-130px -110px',
     },
   },
-  {
+  'honey-soldier': {
     title: "Honey Soldier",
     keyArtPath: "/honey-soldier/cover-art.jpg",
     keyArtCardStyle: {
@@ -23,4 +23,6 @@ export const AllGameInfo : GameInfo[] = [
       objectPosition: '-216px -66px',
     },
   },
-];
+};
+
+export const AllGameInfoArray = Object.entries(AllGameInfo)
