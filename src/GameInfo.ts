@@ -12,7 +12,7 @@ export const AllGameInfo : GameInfo[] = [
     keyArtPath: "/demonizer/cover-art.png",
     keyArtCardStyle: {
       objectFit: 'none',
-      objectPosition: '-148px -82px',
+      objectPosition: '-130px -110px',
     },
   },
   {
@@ -20,7 +20,7 @@ export const AllGameInfo : GameInfo[] = [
     keyArtPath: "/honey-soldier/cover-art.jpg",
     keyArtCardStyle: {
       objectFit: 'none',
-      objectPosition: '-240px -44px',
+      objectPosition: '-216px -66px',
     },
   },
 ];
