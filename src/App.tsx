@@ -17,6 +17,7 @@ function App() {
     }}>
       {AllGameInfo.map((gameInfo) => <GameCard key={gameInfo.title} {...gameInfo}/>)}
     </div>
+    <p>©2023 Iori Branford</p>
   </div>
 }
 
