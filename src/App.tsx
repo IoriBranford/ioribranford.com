@@ -1,44 +1,45 @@
 import "./App.css";
 import NameTag from "./NameTag";
-import GameCard from "./GameCard";
-import { AllGameInfo, AllGameInfoArray } from "./GameInfo";
-import { Dispatch, SetStateAction, createContext, useState } from "react";
+import { AllGameInfoArray } from "./GameInfo";
 import GamePage from "./GamePage";
-
-interface AppInterface {
-  selectGame: Dispatch<SetStateAction<string>>;
-}
-
-export const AppInterfaceContext = createContext<AppInterface>(null!);
+import { Link, Route } from "wouter";
 
 function App() {
-  const [selectedGame, selectGame] = useState("")
-  const appInterface = {
-    selectGame
-  }
-
-  return <AppInterfaceContext.Provider value={appInterface}>
+  return (
     <div style={{
       display: 'flex',
       flexDirection: 'column',
       rowGap: '16px'
     }}>
-      <NameTag name='Iori Branford' src='/avatar.jpg'/>
+      <NameTag name='Iori Branford' src='/avatar.jpg' />
       <div style={{
         display: 'flex',
         flexDirection: 'row',
         columnGap: '16px'
       }}>
-        {selectedGame.length > 0 ? 
-        <GamePage {...AllGameInfo[selectedGame]}/>
-        :
-        AllGameInfoArray.map(([gameId, gameInfo]) =>
-          <GameCard key={gameId} gameId={gameId} gameInfo={gameInfo}/>)
-        }
+        <Route path='/'>
+          {
+            AllGameInfoArray.map(([gameId, gameInfo]) =>
+              <Link key={`${gameId}-card`} className='active' href={`/${gameId}`}>
+                <div className="game-card">
+                    <img className="game-card-image" src={gameInfo.keyArtPath} alt={gameInfo.title} width={420} height={300}
+                        style={gameInfo.keyArtCardStyle} />
+                    <h2 className='game-card-title'>{gameInfo.title}</h2>
+                </div>
+              </Link>
+            )
+          }
+        </Route>
+
+        {AllGameInfoArray.map(([gameId, gameInfo]) =>
+          <Route key={`${gameId}-page`} path={`/${gameId}`}>
+            <GamePage {...gameInfo} />
+          </Route>
+        )}
       </div>
       <p>©2023 Iori Branford</p>
     </div>
-  </AppInterfaceContext.Provider>
+  )
 }
 
 export default App;
