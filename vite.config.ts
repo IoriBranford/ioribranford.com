@@ -1,13 +1,28 @@
-import { defineConfig } from 'vite'
+import { defineConfig, UserConfig } from 'vite'
 import preact from '@preact/preset-vite'
 import {plugin as markdown, Mode} from 'vite-plugin-markdown'
+import basicSsl from '@vitejs/plugin-basic-ssl'
 
-// https://vitejs.dev/config/
-export default defineConfig({
+const baseConfig: UserConfig = {
   plugins: [
     preact(),
     markdown({
       mode: [Mode.HTML]
     })
   ],
-})
+}
+
+const serveConfig: UserConfig = {
+  plugins: [
+    ...baseConfig.plugins,
+    basicSsl()
+  ]
+}
+
+function chooseConfig({command}) {
+  if (command ==='serve')
+      return serveConfig;
+  return baseConfig;
+}
+
+export default defineConfig(chooseConfig)
