@@ -5,7 +5,8 @@ export default function GamePage(gameInfo : GameInfo) {
     return <div className="game-page">
         <img src={keyArtPath} alt={title + " key art"}/>
         <div className='game-page-description'>
-            <h1><img className='game-page-logo' src={logoPath} alt={title}/></h1>
+            {logoPath ? <img className='game-page-logo' src={logoPath} alt={title}/>
+            : <h1>{title}</h1>}
             <div dangerouslySetInnerHTML={{
                 __html: gameInfo.description
             }}/>
