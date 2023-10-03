@@ -45,10 +45,16 @@
   display: flex;
   flex-direction: row;
   border-radius: 16px;
+  column-gap: 16px;
 }
 
 .game-page-description {
   display: flex;
   flex-direction: column;
   text-align: left;
+  max-width: 20%;
+}
+
+.game-page-logo {
+  object-fit: contain;
 }
