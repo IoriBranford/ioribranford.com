@@ -50,4 +50,5 @@
 .game-page-description {
   display: flex;
   flex-direction: column;
+  text-align: left;
 }
