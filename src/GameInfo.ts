@@ -1,5 +1,6 @@
 import { CSSProperties } from "react";
 import { html as DemonizerDescription } from './demonizer/description.md'
+import { html as HoneySoldierDescription } from './honey-soldier/description.md'
 
 export interface GameInfo {
   title: string;
@@ -22,7 +23,7 @@ export const AllGameInfo : {[key:string]: GameInfo} = {
   },
   'honey-soldier': {
     title: "Honey Soldier",
-    description: DemonizerDescription,
+    description: HoneySoldierDescription,
     logoPath: undefined,
     keyArtPath: "/honey-soldier/cover-art.jpg",
     keyArtCardStyle: {
