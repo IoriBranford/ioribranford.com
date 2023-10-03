@@ -1,5 +1,3 @@
-# Demonizer
-
 - Genre: arcade shooter
 - Players: 1
 - Released: Oct 30, 2020
