@@ -1,9 +1,9 @@
-#app {
+/* #app {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
+} */
 
 .logo {
   height: 6em;
@@ -26,6 +26,7 @@
 
 .game-card {
   position: relative;
+  width: fit-content;
 }
 
 .game-card-image {
@@ -35,7 +36,7 @@
 .game-card-title {
   position: absolute;
   left: 16px;
-  top: 0;
+  top: 16px;
   text-align: left;
   color: white;
   text-shadow: 1px 1px #000000,-1px 1px #000000,1px -1px #000000,-1px -1px #000000;
@@ -52,7 +53,6 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  max-width: 20%;
 }
 
 .game-page-logo {
