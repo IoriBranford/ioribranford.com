@@ -10,6 +10,7 @@ export interface GameInfo {
   description: string; // html
   sectionTitles: string[] | undefined;
   sectionBodies: {[key:string]: string} | undefined;
+  galleryElements: string[];
 }
 
 export const AllGameInfo : {[key:string]: GameInfo} = {
@@ -27,6 +28,9 @@ export const AllGameInfo : {[key:string]: GameInfo} = {
       Buy: '',
       'Bonus Material': ''
     },
+    galleryElements: [
+      "<img src='/demonizer/cover-art.png/'>"
+    ]
   },
   'honey-soldier': {
     title: "Honey Soldier",
@@ -41,6 +45,9 @@ export const AllGameInfo : {[key:string]: GameInfo} = {
       About: HoneySoldierDescription,
       Play: HoneySoldierPlay
     },
+    galleryElements: [
+      "<img src='/honey-soldier/cover-art.jpg'/>"
+    ]
   },
 };
 
