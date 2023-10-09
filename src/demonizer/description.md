@@ -1,3 +1,5 @@
+<img class='game-page-logo' src='/demonizer/logo.png' width='100%'/>
+
 - Genre: arcade shooter
 - Players: 1
 - Released: Oct 30, 2020

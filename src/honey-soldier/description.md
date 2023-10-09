@@ -1,3 +1,5 @@
+# Honey Soldier
+
 - Genre: arcade shooter
 - Players: 1
 - Released: Jun 19, 2022
