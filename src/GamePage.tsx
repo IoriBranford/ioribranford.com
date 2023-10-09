@@ -1,9 +1,18 @@
 import { GameInfo } from "./GameInfo";
+import Carousel from 'react-bootstrap/Carousel'
 
 export default function GamePage(gameInfo : GameInfo) {
-    const {title, keyArtPath} = gameInfo
+    const {galleryElements} = gameInfo
     return <div className="game-page">
-        <img src={keyArtPath} alt={title + " key art"}/>
+        <Carousel>
+            {galleryElements.map((html) => (
+                <Carousel.Item>
+                    <div dangerouslySetInnerHTML={{
+                        __html: html
+                    }}/>
+                </Carousel.Item>
+            ))}
+        </Carousel>
         <div className='game-page-description' dangerouslySetInnerHTML={{
             __html: gameInfo.description
         }}/>
