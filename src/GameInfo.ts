@@ -8,8 +8,8 @@ export interface GameInfo {
   keyArtPath: string;
   keyArtCardStyle: CSSProperties;
   description: string; // html
-  sectionTitles: string[] | undefined;
-  sectionBodies: {[key:string]: string} | undefined;
+  sectionTitles: string[];
+  sectionBodies: {[key:string]: string};
   galleryElements: string[];
 }
 
