@@ -29,7 +29,7 @@ export const AllGameInfo : {[key:string]: GameInfo} = {
       'Bonus Material': ''
     },
     galleryElements: [
-      "<img src='/demonizer/cover-art.png/'>"
+      "<img class='game-gallery-image' src='/demonizer/cover-art.png/'>"
     ]
   },
   'honey-soldier': {
@@ -46,7 +46,10 @@ export const AllGameInfo : {[key:string]: GameInfo} = {
       Play: HoneySoldierPlay
     },
     galleryElements: [
-      "<img src='/honey-soldier/cover-art.jpg'/>"
+      "<img class='game-gallery-image' src='/honey-soldier/cover-art.jpg'/>",
+      "<img class='game-gallery-image' src='/honey-soldier/shot1.jpg'/>",
+      "<img class='game-gallery-image' src='/honey-soldier/shot2.jpg'/>",
+      "<img class='game-gallery-image' src='/honey-soldier/shot3.jpg'/>",
     ]
   },
 };

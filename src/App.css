@@ -48,6 +48,11 @@
   column-gap: 16px;
 }
 
+.game-gallery-image {
+  width: 100%;
+  object-fit: contain;
+}
+
 .game-page-description {
   display: flex;
   flex-direction: column;
